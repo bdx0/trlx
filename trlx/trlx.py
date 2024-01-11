@@ -96,6 +96,7 @@ def train(  # noqa: C901
         stop_sequences=stop_sequences,
         **config.train.trainer_kwargs,
     )
+    print(trainer)
 
     batch_size = config.train.batch_size * int(os.environ.get("WORLD_SIZE", 1))
     max_prompt_length = config.train.seq_length - config.method.gen_kwargs["max_new_tokens"]

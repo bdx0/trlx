@@ -1,0 +1,2 @@
+- https://huggingface.co/blog/rlhf
+- https://github.com/nichtdax/awesome-totally-open-chatgpt/blob/main/README.md

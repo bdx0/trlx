@@ -151,3 +151,7 @@ examples/experiments/grounded_program_synthesis/dataset
 ckpts/
 
 ray_results/
+
+gpt2-rlhf
+gpt2-sft
+rm_checkpoint

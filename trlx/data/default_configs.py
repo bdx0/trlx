@@ -19,7 +19,7 @@ def default_ppo_config():
         train=TrainConfig(
             seq_length=1024,
             epochs=100,
-            total_steps=10000,
+            total_steps=100000,
             batch_size=32,
             checkpoint_interval=10000,
             eval_interval=100,

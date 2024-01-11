@@ -21,7 +21,7 @@ def set_seed(seed_val=42):
 
 
 if __name__ == "__main__":
-    output_dir = "gptj-supervised-summarize-checkpoint"
+    output_dir = "gpt2-supervised-summarize-checkpoint"
     train_batch_size = 16
     gradient_accumulation_steps = 1
     learning_rate = 1e-5
@@ -32,8 +32,10 @@ if __name__ == "__main__":
     num_train_epochs = 5
     random.seed(42)
 
-    tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
-    model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", use_cache=False)
+    # tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
+    # model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", use_cache=False)
+    tokenizer = AutoTokenizer.from_pretrained("gpt2")
+    model = AutoModelForCausalLM.from_pretrained("gpt2", use_cache=False)
     tokenizer.pad_token = tokenizer.eos_token
     model.resize_token_embeddings(len(tokenizer))
     tokenizer.pad_token_id = tokenizer.eos_token_id
